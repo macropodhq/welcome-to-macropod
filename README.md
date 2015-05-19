@@ -1,14 +1,22 @@
+# Welcome to Macropod
+
+This is an evolving set of instructions and hints for working with [Macropod](https://macropod.com) projects, internal or external.
+
 ## Configuring Sublime Text
+
+Sublime Text 3 is the de facto editor of choice at Macropod. Included here are some of the things we use to integrate it into our workflow.
+
+### For JavaScript and React
 
 For our projects, we use some language features which are newer than Sublime Text's default syntax highlighting supports.
 
 Following these instructions will help you set up your copy of Sublime Text to work consistently with our projects' modern features, and give you output from our linting setup.
 
-The following instructions are for Sublime Text 3, unfortunately at this point there are not compatible equivalents for Sublime Text 2.
+The instructions in this section are for Sublime Text 3, unfortunately at this point there are not compatible equivalents for Sublime Text 2.
 
 _**Note**: After following these instructions, it is likely that you will need to restart Sublime Text to make use of it._
 
-### Basic Editor Configuration
+#### Basic Editor Configuration
 
 Most of our projects provide an `.editorconfig` to set basic configuration consistently despite each developer's own preferences. We use [editorconfig-sublime](https://github.com/sindresorhus/editorconfig-sublime) to integrate this with Sublime Text.
 
@@ -16,7 +24,7 @@ Most of our projects provide an `.editorconfig` to set basic configuration consi
 2. Select "Package Control: Install Package" from the command palette, and wait for the package list to load
 3. Type `EditorConfig` into the palette and select it, then wait for the package to install
 
-### ES6 and JSX support
+#### ES6 and JSX support
 
 For ES6 and JSX support, we use [babel-sublime](https://github.com/babel/babel-sublime).
 
@@ -24,7 +32,7 @@ For ES6 and JSX support, we use [babel-sublime](https://github.com/babel/babel-s
 2. Select "Package Control: Install Package" from the command palette, and wait for the package list to load
 3. Type `Babel` into the palette and select it, then wait for the package to install
 
-### Preparing for Linting
+#### Preparing for Linting
 
 For linting, we use [eslint](http://eslint.org) and for ES6 and JSX linting support, [babel-eslint](https://github.com/babel/babel-eslint). For Sublime Text integration, we use [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) and [SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint).
 
