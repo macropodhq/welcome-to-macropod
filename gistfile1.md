@@ -4,6 +4,8 @@ For our projects, we use some language features which are newer than Sublime Tex
 
 Following these instructions will help you set up your copy of Sublime Text to work consistently with our projects' modern features, and give you output from our linting setup.
 
+The following instructions work for Sublime Text 3, and as of the time of writing, not with Sublime Text 2.
+
 _**Note**: After following these instructions, it is likely that you will need to restart Sublime Text to make use of it._
 
 ### Basic Editor Configuration
