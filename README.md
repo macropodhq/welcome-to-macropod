@@ -4,25 +4,23 @@ This is an evolving set of instructions and hints for working with [Macropod](ht
 
 ## Configuring Sublime Text
 
-Sublime Text 3 is the de facto editor of choice at Macropod. Included here are some of the things we use to integrate it into our workflow.
-
-### For JavaScript and React
-
-For our projects, we use some language features which are newer than Sublime Text's default syntax highlighting supports.
-
-Following these instructions will help you set up your copy of Sublime Text to work consistently with our projects' modern features, and give you output from our linting setup.
-
-The instructions in this section are for Sublime Text 3, unfortunately at this point there are not compatible equivalents for Sublime Text 2.
+[Sublime Text 3](http://www.sublimetext.com/3) is the de facto editor of choice at Macropod. Included here are some of the things we use to integrate it into our workflow.
 
 _**Note**: After following these instructions, it is likely that you will need to restart Sublime Text to make use of it._
 
-#### Basic Editor Configuration
+### Basic Editor Configuration
 
 Most of our projects provide an `.editorconfig` to set basic configuration consistently despite each developer's own preferences. We use [editorconfig-sublime](https://github.com/sindresorhus/editorconfig-sublime) to integrate this with Sublime Text.
 
 1. Open the command palette with Command+Shift+P (Control+Shift+P on Windows and Linux)
 2. Select "Package Control: Install Package" from the command palette, and wait for the package list to load
 3. Type `EditorConfig` into the palette and select it, then wait for the package to install
+
+### For JavaScript and React
+
+For our projects, we use some language features which are newer than Sublime Text's default syntax highlighting supports.
+
+Following these instructions will help you set up your copy of Sublime Text to work consistently with our projects' modern features, and give you output from our linting setup.
 
 #### ES6 and JSX support
 
