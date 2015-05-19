@@ -29,7 +29,7 @@ For ES6 and JSX support, we use [babel-sublime](https://github.com/babel/babel-s
 For linting, we use [eslint](http://eslint.org) and for ES6 and JSX linting support, [babel-eslint](https://github.com/babel/babel-eslint). For Sublime Text integration, we use [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) and [SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint).
 
 1. Install the command-line dependencies system-wide  
-   `npm install -g eslint babel-eslint`
+   `npm install -g eslint eslint-plugin-react babel-eslint`
 2. In Sublime Text, open the command palette with Command+Shift+P (Control+Shift+P on Windows and Linux)
 2. Select "Package Control: Install Package" from the command palette, and wait for the package list to load
 3. Type `SublimeLinter` into the palette and select it, then wait for the package to install
