@@ -8,6 +8,7 @@ Take a read of `css-modules` to understand how standard modularity works. We've 
   - [Naming conventions](#naming-conventions)
   - [Importing the class object](#importing-the-class-object)
   - [Composing](#composing)
+  - [Styling elements like `p`](#element-styling)
 - [Structuring re-usable components](#structuring-re-usable-components)
   - [Components with conditional classes](#components-with-conditional-classes)
 - [Constants (variables)](#constants)
@@ -65,6 +66,62 @@ import styles from './component.mcss';
   color: blue;
 }
 ```
+
+### Element styling
+
+There's a drawback with being so explicit about class names - and that's being explicit about class names that re-occur often. Take for example, a bunch of paragraphs:
+
+*`view.mcss`*
+```css
+.paragraph {
+  margin: 2em 0;
+}
+```
+
+*`view.js`*
+```js
+import styles from './view.mcss';
+
+render() {
+  return (
+    <div>
+      <p className={styles.paragraph}>Lorem</p>
+      <p className={styles.paragraph}>Lorem</p>
+      <p className={styles.paragraph}>Lorem</p>
+      <p className={styles.paragraph}>Lorem</p>
+    </div>
+  )
+}
+```
+
+You can see that the `DOM` is getting polluted incredibly fast - it's making it quite difficult to read. On a page with more paragraphs (think 20!), passing the `className` prop to every `p` gets tedious. We can't just style `p {}` because that will be a global style - so we need to restrict it:
+
+*`view.mcss`*
+```css
+.container :global(p) {
+  margin: 2em 0;
+}
+```
+
+*`view.js`*
+```js
+import styles from './view.mcss';
+
+render() {
+  return (
+    <div className={styles.container}>
+      <p>Lorem</p>
+      <p>Lorem</p>
+      <p>Lorem</p>
+      <p>Lorem</p>
+    </div>
+  )
+}
+```
+
+While it is harder to trace from a file point of view - it is easily traced in inspector (`.hashed-name p`).
+
+**Note:** please don't abuse this. If you feel like you're adding too many of the same classes, you probably are. If you're being lazy and just using `:global()` instead of a few cmd+c shortcuts - you're doing it wrong.
 
 ## Structuring re-usable components
 
