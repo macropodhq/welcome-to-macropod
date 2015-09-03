@@ -1,6 +1,6 @@
 # `.mcss`
 
-`mcss` is Macropods stylesheet extension. It stands for `modular-cascading-style-sheet`; where locally scoped modules are enabled by default - with some cool other features. The main driving force behind `mcss` is [css-modules](https://github.com/css-modules/css-modules).
+`mcss` is Macropod's stylesheet extension. It stands for `modular-cascading-style-sheet`; where locally scoped modules are enabled by default - with some cool other features. The main driving force behind `mcss` is [css-modules](https://github.com/css-modules/css-modules).
 
 Take a read of `css-modules` to understand how standard modularity works. We've enabled [local scoping](https://github.com/webpack/css-loader#local-scope) through `css-loader`, so none of our classes will bleed.
 
@@ -36,9 +36,7 @@ import styles from './component.mcss';
 <a href="#" className={styles.linkBlue} />
 ```
 
-#### Note:
-
-If you're referring to a component (`<Avatar />`) begin the class with a capital (`.Avatar`). If you're referring to an element (`<img alt="avatar" />`) begin the class with a lower case letter (`.avatar`).
+_**Note**: If you're referring to a component (`<Avatar />`) begin the class with a capital (`.Avatar`). If you're referring to an element (`<img alt="avatar" />`) begin the class with a lower case letter (`.avatar`)._
 
 ### Importing the class object
 
@@ -121,7 +119,7 @@ render() {
 
 While it is harder to trace from a file point of view - it is easily traced in inspector (`.hashed-name p`).
 
-**Note:** please don't abuse this. If you feel like you're adding too many of the same classes, you probably are. If you're being lazy and just using `:global()` instead of a few cmd+c shortcuts - you're doing it wrong.
+_**Note:** please don't abuse this. If you feel like you're adding too many of the same classes, you probably are. If you're being lazy and just using `:global()` instead of a few cmd+c shortcuts - you're doing it wrong._
 
 ## Structuring re-usable components
 
