@@ -11,7 +11,7 @@ Take a read of `css-modules` to understand how standard modularity works. We've 
   - [Styling elements like `p`](#element-styling)
 - [Structuring re-usable components](#structuring-re-usable-components)
   - [Components with conditional classes](#components-with-conditional-classes)
-- [Constants (variables)](#constants)
+- [Constants (variables)](#constants-and-variables)
 
 ----
 
@@ -245,6 +245,6 @@ render() {
 
 Our `Button`'s disabled state will now have a gray background for this implementation only! You can see one drawback - we need to define `.Button` if we're defining a conditional version of it. Otherwise, because `this.props.className` is defined, it wouldn't apply the default style.
 
-## Constants
+## Constants and Variables
 
-Please see [`postcss-local-constants`](https://github.com/macropodhq/postcss-local-constants) for conventions. **This will be updated when we roll out some form of theming across our products. Stay tuned.**
+Please see the [`theming`](theming.md#values) page for conventions.
